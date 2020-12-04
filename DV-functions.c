@@ -188,6 +188,7 @@ int printDV(struct new_vector_struct DV[], int numberOfNodes){
   for(i = 0; i < numberOfNodes; i++)
   {
     printf("%d %d %d %d %d\n", DV[i].fromNode, DV[i].toNode, DV[i].cost, DV[i].changed, DV[i].previousNode);
+    printf("\n");
   }
   /////// print the current distance vector table
   return 0;
