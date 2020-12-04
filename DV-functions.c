@@ -306,7 +306,7 @@ int getInputFromUser(struct neighbor_struct neighbors[], int myNode,  struct new
     return 0; 
   }
   else if (strcmp (command, "refresh")==0){
-      sendDVTodNeighbors(neighbors, myNode, DV, numberOfNodes);
+      sendDVToNeighbors(neighbors, myNode, DV, numberOfNodes);
       //send info to other nodes
       return 0; 
   }
@@ -321,7 +321,7 @@ int getInputFromUser(struct neighbor_struct neighbors[], int myNode,  struct new
     return -1;
 
   DV[toNode].cost = cost;
-  sendDVTodNeighbors(neighbors, myNode, DV, numberOfNodes);
+  sendDVToNeighbors(neighbors, myNode, DV, numberOfNodes);
   //set new cost and send to neighbors
 
   // If i get to this point, i know the command is an update.
