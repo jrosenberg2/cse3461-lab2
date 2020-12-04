@@ -176,7 +176,7 @@ int printNeighbors(struct neighbor_struct neighbors[]){
   int i;
   for(i = 0; i < sizeOf(neighbors)/sizeOf(neighbors[0]); i++)
   {
-    printf("%d %s %d", neighbros[i].nodeNum, neighbros[i].ipaddress, neighbros[i].portNumber);
+    printf("%d %s %d", neighbors[i].nodeNum, neighbors[i].ipaddress, neighbors[i].portNumber);
   }
   ////////print the neighbors table
   return 0;
