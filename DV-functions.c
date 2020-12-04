@@ -174,7 +174,7 @@ int main(int argc, char *argv[] ){
 // this function should print the neighbor table only printing valid entries
 int printNeighbors(struct neighbor_struct neighbors[]){
   int i;
-  for(i = 0; i < sizeOf(neighbors)/sizeOf(neighbors[0]); i++)
+  for(i = 0; i < sizeof(neighbors)/sizeof(neighbors[0]); i++)
   {
     printf("%d %s %d", neighbors[i].nodeNum, neighbors[i].ipaddress, neighbors[i].portNumber);
   }
