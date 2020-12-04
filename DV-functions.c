@@ -174,6 +174,10 @@ int main(int argc, char *argv[] ){
 // this function should print the neighbor table only printing valid entries
 int printNeighbors(struct neighbor_struct neighbors[]){
   int i;
+  for(i = 0; i < neighbors.length(); i++)
+  {
+    printf("%d %s %d", neighbros[i].nodeNum, neighbros[i]ipaddress, neighbros[i].portNumber);
+  }
   ////////print the neighbors table
   return 0;
 }
@@ -202,7 +206,7 @@ int readNeighborsFile(struct neighbor_struct neighbors[], char *filename, int my
     printf("Error!");   
     exit(1);             
   }
-  while(fscanf(fileptr, "%d %s %d", nodeNumber, ipaddress, portNumber) == 1)
+  while(fscanf(fileptr, "%d %s %d", &nodeNumber, ipaddress, &portNumber) == 1)
   {
     
     neighbors[maxNeighbors].nodeNum = nodeNumber;
