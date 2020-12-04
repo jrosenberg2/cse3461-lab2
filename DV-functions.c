@@ -176,7 +176,7 @@ int printNeighbors(struct neighbor_struct neighbors[]){
   int i;
   for(i = 0; i < sizeof(neighbors)/sizeof(neighbors[0]); i++)
   {
-    printf("%d %s %d", neighbors[i].nodeNum, neighbors[i].ipaddress, neighbors[i].portNumber);
+    printf("%d %s %d\n", neighbors[i].nodeNum, neighbors[i].ipaddress, neighbors[i].portNumber);
   }
   ////////print the neighbors table
   return 0;
@@ -187,7 +187,7 @@ int printDV(struct new_vector_struct DV[], int numberOfNodes){
   int i;
   for(i = 0; i < numberOfNodes; i++)
   {
-    printf("%d %d %d %d %d", DV[i].fromNode, DV[i].toNode, DV[i].cost, DV[i].changed, DV[i].previousNode);
+    printf("%d %d %d %d %d\n", DV[i].fromNode, DV[i].toNode, DV[i].cost, DV[i].changed, DV[i].previousNode);
   }
   /////// print the current distance vector table
   return 0;
