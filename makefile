@@ -14,5 +14,8 @@
   $(TARGET): $(TARGET).c
 	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
 
+  lab2.zip: DV-functions.c Makefile README.md
+	zip lab2 DV-functions.c Makefile README.md
+
   clean:
 	$(RM) $(TARGET)
